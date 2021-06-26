@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background-img{
+    background-image: url("./Images/witcher.png");
+    background-size: cover;
+    background-position: top center ;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.overflow_x{
+    @apply overflow-x-scroll flex overflow-y-hidden;
+}
+.overflow_x::-webkit-scrollbar{
+    display: none ;
+}
+
+.overflow_y{
+    @apply flex flex-col mr-14 overflow-y-scroll overflow-x-hidden h-48 ;
+}
+
+.overflow_y::-webkit-scrollbar{
+    display: none ;
 }
